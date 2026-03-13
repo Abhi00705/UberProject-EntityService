@@ -7,6 +7,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -36,6 +38,13 @@ public class Booking extends BaseClass{
 
     @ManyToOne
     private Drivers drivers;
+
+    @OneToOne
+    private ExactLocation startLocation;
+
+    @OneToOne
+    private ExactLocation endLocation;
+
 
 }
 
