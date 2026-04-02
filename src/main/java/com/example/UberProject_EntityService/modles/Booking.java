@@ -3,6 +3,7 @@ package com.example.UberProject_EntityService.modles;
 
 
 import com.example.UberProject_EntityService.Enums.BookingStatus;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -37,12 +38,13 @@ public class Booking extends BaseClass{
     private Passenger passenger;
 
     @ManyToOne
+    @JsonIgnoreProperties({"drivers"})
     private Drivers drivers;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation startLocation;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation endLocation;
 
 

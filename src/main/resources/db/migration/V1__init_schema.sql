@@ -36,7 +36,7 @@ CREATE TABLE booking (
     created_at      TIMESTAMP       NOT NULL,
     updated_at      TIMESTAMP       NOT NULL,
     distance        BIGINT,
-    booking_status  ENUM('SCHEDULE','IN_RIDE','CANCEL','COMPLETED'),    -- Enum: SCHEDULE | IN_RIDE | CANCEL | COMPLETED
+    booking_status  ENUM('SCHEDULE','IN_RIDE','CANCEL','COMPLETED', 'ASSIGNING_DRIVER'),    -- Enum: SCHEDULE | IN_RIDE | CANCEL | COMPLETED
     start_time      DATETIME,
     end_time        DATETIME,
     passenger_id    BIGINT,

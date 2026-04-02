@@ -1,6 +1,8 @@
 package com.example.UberProject_EntityService.modles;
 
 import com.example.UberProject_EntityService.Enums.DriverApprovelStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
@@ -41,10 +43,11 @@ public class Drivers extends BaseClass{
     @DecimalMax(value = "5.00", message = "Rating should be less then 5.00" )
     private Double rating;
 
-    private boolean isAvilable;
+    private Boolean isAvilable;
 
     @OneToMany(mappedBy = "drivers", fetch = FetchType.LAZY)
     @Fetch(value= FetchMode.SUBSELECT)
+    @JsonIgnore
     private List<Booking> booking;
 
 

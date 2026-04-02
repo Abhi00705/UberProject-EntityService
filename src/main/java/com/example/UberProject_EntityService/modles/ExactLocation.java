@@ -10,6 +10,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ExactLocation extends BaseClass{
-    private String longitude;
-    private String latitude;
+    private double longitude;
+    private double latitude;
 }

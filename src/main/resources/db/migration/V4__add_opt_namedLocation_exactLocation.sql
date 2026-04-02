@@ -6,8 +6,8 @@ CREATE TABLE exact_location (
     created_at DATETIME NOT NULL,
     updated_at DATETIME NOT NULL,
 
-    longitude VARCHAR(100),
-    latitude VARCHAR(100),
+    longitude DOUBLE,
+    latitude DOUBLE,
 
     CONSTRAINT pk_exact_location PRIMARY KEY (id)
 );

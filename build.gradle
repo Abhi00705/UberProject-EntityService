@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.7-SNAPSHOT'
 description = 'Demo project for Spring Boot'
 
 java {
@@ -25,14 +25,14 @@ publishing {
 	publications {
 		mavenJava(MavenPublication){
 			from components.java
-			versionMapping {
-				usage('java-api') {
-					fromResolutionOf('runtimeClasspath')
-				}
-				usage('java-runtime') {
-					fromResolutionResult()
-				}
-			}
+//			versionMapping {
+//				usage('java-api') {
+//					fromResolutionOf('runtimeClasspath')
+//				}
+//				usage('java-runtime') {
+//					fromResolutionResult()
+//				}
+//			}
 		}
 	}
 
